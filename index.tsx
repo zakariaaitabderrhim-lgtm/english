@@ -126,6 +126,7 @@ const Hero = () => (
               muted
               loop
               playsInline
+              controls
               aria-label="جلسة تعليمية تجريبية مع الأستاذ زكرياء"
             />
             <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 bg-white/95 backdrop-blur p-4 md:p-6 rounded-2xl shadow-2xl border border-gray-100">
