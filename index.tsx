@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center">
             <span className="text-xl md:text-2xl font-extrabold tracking-tight">
-              <span className="text-primary">Zakariae</span> English
+              <span className="text-primary">Zakaria</span> English
             </span>
           </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
       >
         <div className="p-6 flex flex-col h-full">
           <div className="flex justify-between items-center mb-12">
-            <span className="text-2xl font-black"><span className="text-primary">Zakariae</span> English</span>
+            <span className="text-2xl font-black"><span className="text-primary">Zakaria</span> English</span>
             <button
               onClick={() => setIsOpen(false)}
               className="p-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
@@ -103,7 +103,7 @@ const Hero = () => (
             المستقبل يبدأ من هنا 🚀
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 leading-[1.15] mb-6 md:mb-8">
-            ارتقِ بمستقبلك مع اللغة الإنجليزية: <span className="text-primary block mt-2">تعلم عن بعد مع الأستاذ زكرياء أيت عبد الرحيم</span>
+            استثمر في فرصك المستقبلية بالإنجليزية: <span className="text-primary block mt-2">تعلم عن بعد مع الأستاذ زكرياء أيت عبد الرحيم</span>
           </h1>
           <p className="text-lg md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
             لست مجرد رقم في منصة! استمتع بحصص حية، متابعة يومية عبر الواتساب، ومنهج تعليمي مُصمم خصيصاً ليناسب أهدافك المهنية والدراسية.
@@ -129,10 +129,6 @@ const Hero = () => (
               controls
               aria-label="جلسة تعليمية تجريبية مع الأستاذ زكرياء"
             />
-            <div className="absolute top-4 right-4 md:top-8 md:right-8 bg-white/95 backdrop-blur p-4 md:p-6 rounded-2xl shadow-2xl border border-gray-100">
-              <p className="text-[10px] md:text-xs font-bold text-gray-400 mb-1 uppercase tracking-widest text-center">بناء النجاح</p>
-              <p className="text-2xl md:text-4xl font-black text-primary text-center">+100 طالب</p>
-            </div>
           </div>
           <div className="absolute -top-10 -left-10 w-24 h-24 md:w-40 md:h-40 bg-orange-200/40 rounded-full blur-3xl animate-pulse"></div>
         </div>
@@ -149,9 +145,9 @@ const About = () => (
           <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-orange-400/20 rounded-[3rem] blur-2xl opacity-50"></div>
           <div className="relative bg-white p-2 md:p-4 rounded-[2.5rem] shadow-2xl">
             <img
-              src="/image.jpg"
-              alt="الأستاذ زكرياء أيت عبد الرحيم - معلم لغة إنجليزية محترف"
-              className="w-full aspect-[3/4] object-cover rounded-[2rem]"
+              src="/public/image.jpg"
+              alt="الأستاذ زكرياء أيت عبد الرحيم - أستاذ اللغة الإنجليزية"
+              className="w-full h-[400px] md:h-[500px] object-cover rounded-[2rem]"
               loading="lazy"
             />
           </div>
@@ -196,7 +192,7 @@ const Programs = () => {
       feature: "ثقة مطلقة في التواصل الدولي وزيادة فرص الترقية أو نجاح مشروعك.",
       duration: "90 دقيقة/حصة • حصتين أسبوعياً • 3 أشهر",
       price: "600",
-      priceLabel: "درهم (البرنامج الكامل 3 أشهر)",
+      priceLabel: "درهم (برنامج 3 أشهر)",
       icon: "💼"
     },
     {
@@ -207,7 +203,7 @@ const Programs = () => {
       feature: "نضمن لك الجاهزية التامة لتحقيق أعلى النقاط وبناء مسار جامعي ناجح.",
       duration: "90 دقيقة/حصة • حصتين أسبوعياً • 3 أشهر",
       price: "ابتداءاً من 300",
-      priceLabel: "درهم (البرنامج الكامل 3 أشهر)",
+      priceLabel: "درهم (برنامج 3 أشهر)",
       popular: true,
       icon: "📝"
     },
@@ -222,7 +218,7 @@ const Programs = () => {
         { label: "Standard", price: "400", description: "حصص تفاعلية فقط" },
         { label: "VIP", price: "600", description: "+ متابعة يومية + تمارين مخصصة" }
       ],
-      priceLabel: "درهم (البرنامج الكامل 3 أشهر)",
+      priceLabel: "درهم (برنامج 3 أشهر)",
       icon: "🌍"
     }
   ];
@@ -414,7 +410,7 @@ const Footer = () => (
 
       <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="text-2xl font-black">
-          <span className="text-primary">Zakariae</span> English
+          <span className="text-primary">Zakaria</span> English
         </div>
         <p className="text-gray-500 font-bold text-sm text-center">
           © {new Date().getFullYear()} جميع الحقوق محفوظة للأستاذ زكرياء أيت عبد الرحيم.
