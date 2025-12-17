@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import FAQ from './components/FAQ';
 import WhatsAppWidget from './components/WhatsAppWidget';
@@ -91,51 +91,76 @@ const Navbar = () => {
   );
 };
 
-const Hero = () => (
-  <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-    <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10"></div>
-    <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] -z-10"></div>
+const Hero = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-        <div className="flex-1 text-center lg:text-right order-2 lg:order-1">
-          <div className="inline-block px-4 py-1 bg-orange-50 text-primary rounded-full text-xs md:text-sm font-black mb-6 animate-fade-in uppercase tracking-wider">
-            المستقبل يبدأ من هنا 🚀
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10"></div>
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] -z-10"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div className="flex-1 text-center lg:text-right order-2 lg:order-1">
+            <div className="inline-block px-4 py-1 bg-orange-50 text-primary rounded-full text-xs md:text-sm font-black mb-6 animate-fade-in uppercase tracking-wider">
+              المستقبل يبدأ من هنا 🚀
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 leading-[1.15] mb-6 md:mb-8">
+              استثمر في فرصك المستقبلية بالإنجليزية: <span className="text-primary block mt-2">تعلم عن بعد مع الأستاذ زكرياء أيت عبد الرحيم</span>
+            </h1>
+            <p className="text-lg md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              لست مجرد رقم في منصة! استمتع بحصص حية، متابعة يومية عبر الواتساب، ومنهج تعليمي مُصمم خصيصاً ليناسب أهدافك المهنية والدراسية.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href="https://wa.me/212675548699?text=مرحباً، أريد حجز حصة تجريبية مجانية"
+                className="bg-primary text-white px-8 md:px-10 py-4 md:py-6 rounded-2xl text-lg md:text-xl font-black shadow-2xl shadow-primary/30 hover:scale-105 transition-all active:scale-95 text-center"
+              >
+                احجز حصتك التجريبية المجانية الآن
+              </a>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 leading-[1.15] mb-6 md:mb-8">
-            استثمر في فرصك المستقبلية بالإنجليزية: <span className="text-primary block mt-2">تعلم عن بعد مع الأستاذ زكرياء أيت عبد الرحيم</span>
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-            لست مجرد رقم في منصة! استمتع بحصص حية، متابعة يومية عبر الواتساب، ومنهج تعليمي مُصمم خصيصاً ليناسب أهدافك المهنية والدراسية.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a
-              href="https://wa.me/212675548699?text=مرحباً، أريد حجز حصة تجريبية مجانية"
-              className="bg-primary text-white px-8 md:px-10 py-4 md:py-6 rounded-2xl text-lg md:text-xl font-black shadow-2xl shadow-primary/30 hover:scale-105 transition-all active:scale-95 text-center"
-            >
-              احجز حصتك التجريبية المجانية الآن
-            </a>
+          <div className="flex-1 relative w-full lg:w-auto order-1 lg:order-2">
+            <div className="relative z-10 shadow-2xl group">
+              <video
+                ref={videoRef}
+                src="/session demo.mp4"
+                className="w-full md:h-[500px] object-contain cursor-pointer"
+                autoPlay
+                muted={isMuted}
+                loop
+                playsInline
+                onClick={toggleMute}
+                aria-label="جلسة تعليمية تجريبية مع الأستاذ زكرياء"
+              />
+
+              {isMuted && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer transition-opacity hover:bg-black/40"
+                  onClick={toggleMute}
+                >
+                  <div className="bg-white/90 backdrop-blur text-gray-900 px-6 py-3 rounded-full font-black flex items-center gap-3 shadow-2xl animate-bounce">
+                    <span className="text-2xl">🔊</span>
+                    <span>اضغط لتشغيل الصوت</span>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="absolute -top-10 -left-10 w-24 h-24 md:w-40 md:h-40 bg-orange-200/40 rounded-full blur-3xl animate-pulse"></div>
           </div>
-        </div>
-        <div className="flex-1 relative w-full lg:w-auto order-1 lg:order-2">
-          <div className="relative z-10 shadow-2xl">
-            <video
-              src="/session demo.mp4"
-              className="w-full md:h-[500px] object-contain"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-              aria-label="جلسة تعليمية تجريبية مع الأستاذ زكرياء"
-            />
-          </div>
-          <div className="absolute -top-10 -left-10 w-24 h-24 md:w-40 md:h-40 bg-orange-200/40 rounded-full blur-3xl animate-pulse"></div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const About = () => (
   <section id="about" className="relative min-h-screen flex items-center py-20 bg-gray-50 overflow-hidden">
