@@ -129,7 +129,7 @@ const Hero = () => (
               controls
               aria-label="جلسة تعليمية تجريبية مع الأستاذ زكرياء"
             />
-            <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 bg-white/95 backdrop-blur p-4 md:p-6 rounded-2xl shadow-2xl border border-gray-100">
+            <div className="absolute top-4 right-4 md:top-8 md:right-8 bg-white/95 backdrop-blur p-4 md:p-6 rounded-2xl shadow-2xl border border-gray-100">
               <p className="text-[10px] md:text-xs font-bold text-gray-400 mb-1 uppercase tracking-widest text-center">بناء النجاح</p>
               <p className="text-2xl md:text-4xl font-black text-primary text-center">+100 طالب</p>
             </div>
