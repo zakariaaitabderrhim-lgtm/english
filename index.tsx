@@ -170,7 +170,7 @@ const About = () => (
           <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-orange-400/20 rounded-[3rem] blur-2xl opacity-50"></div>
           <div className="relative bg-white p-2 md:p-4 rounded-[2.5rem] shadow-2xl">
             <img
-              src="/public/image.jpg"
+              src="/image.jpg"
               alt="الأستاذ زكرياء أيت عبد الرحيم - أستاذ اللغة الإنجليزية"
               className="w-full h-[400px] md:h-[500px] object-cover rounded-[2rem]"
               loading="lazy"
@@ -347,7 +347,7 @@ const Features = () => {
     <section id="features" className="relative min-h-screen flex items-center py-20 bg-orange-50/50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className="order-2 lg:order-1">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-8 text-center lg:text-right">لماذا نحن الخيار الأفضل؟</h2>
             <div className="grid gap-6">
               {usps.map((usp, idx) => (
@@ -363,7 +363,7 @@ const Features = () => {
               ))}
             </div>
           </div>
-          <div className="relative mt-8 lg:mt-0">
+          <div className="relative mt-8 lg:mt-0 order-1 lg:order-2">
             <div className="relative bg-white rounded-[4rem] p-4 shadow-2xl overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
