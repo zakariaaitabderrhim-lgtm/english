@@ -363,7 +363,7 @@ const Features = () => {
               ))}
             </div>
           </div>
-          <div className="hidden lg:block relative">
+          <div className="relative mt-8 lg:mt-0">
             <div className="relative bg-white rounded-[4rem] p-4 shadow-2xl overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
