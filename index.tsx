@@ -218,7 +218,8 @@ const Programs = () => {
       duration: "90 دقيقة/حصة • حصتين أسبوعياً • 3 أشهر",
       price: "600",
       priceLabel: "درهم (برنامج 3 أشهر)",
-      icon: "💼"
+      icon: "💼",
+      orderClass: "order-3 lg:order-none"
     },
     {
       title: "Exam Preparation",
@@ -230,7 +231,8 @@ const Programs = () => {
       price: "ابتداءً من 300",
       priceLabel: "درهم (برنامج 3 أشهر)",
       popular: true,
-      icon: "📝"
+      icon: "📝",
+      orderClass: "order-1 lg:order-none"
     },
     {
       title: "General English",
@@ -244,7 +246,8 @@ const Programs = () => {
         { label: "VIP", price: "600", description: "+ متابعة يومية + تمارين مخصصة" }
       ],
       priceLabel: "درهم (برنامج 3 أشهر)",
-      icon: "🌍"
+      icon: "🌍",
+      orderClass: "order-2 lg:order-none"
     }
   ];
 
@@ -260,7 +263,7 @@ const Programs = () => {
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className={`relative bg-white rounded-[2.5rem] p-8 md:p-10 border transition-all duration-500 hover:shadow-2xl flex flex-col ${plan.popular ? 'border-primary shadow-xl' : 'border-gray-100 shadow-lg'}`}
+              className={`relative bg-white rounded-[2.5rem] p-8 md:p-10 border transition-all duration-500 hover:shadow-2xl flex flex-col ${plan.popular ? 'border-primary shadow-xl' : 'border-gray-100 shadow-lg'} ${plan.orderClass || ''}`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 right-1/2 translate-x-1/2 bg-primary text-white px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest">
