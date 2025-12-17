@@ -114,17 +114,17 @@ const Hero = () => {
               المستقبل يبدأ من هنا 🚀
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 leading-[1.15] mb-6 md:mb-8">
-              استثمر في فرصك المستقبلية بالإنجليزية: <span className="text-primary block mt-2">تعلم عن بعد مع الأستاذ زكرياء أيت عبد الرحيم</span>
+              حول لغتك الإنجليزية من عائق إلى <span className="text-primary block mt-2">أقوى أسلحتك في سوق العمل</span>
             </h1>
             <p className="text-lg md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
               لست مجرد رقم في منصة! استمتع بحصص حية، متابعة يومية عبر الواتساب، ومنهج تعليمي مُصمم خصيصاً ليناسب أهدافك المهنية والدراسية.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="https://wa.me/212675548699?text=مرحباً، أريد حجز حصة تجريبية مجانية"
+                href="https://wa.me/212675548699?text=مرحباً، أريد حجز مقعدي المجاني في الحصة التجريبية"
                 className="bg-primary text-white px-8 md:px-10 py-4 md:py-6 rounded-2xl text-lg md:text-xl font-black shadow-2xl shadow-primary/30 hover:scale-105 transition-all active:scale-95 text-center"
               >
-                احجز حصتك التجريبية المجانية الآن
+                احجز مقعدك المجاني الآن
               </a>
             </div>
           </div>
@@ -163,7 +163,7 @@ const Hero = () => {
 };
 
 const About = () => (
-  <section id="about" className="relative min-h-screen flex items-center py-20 bg-gray-50 overflow-hidden">
+  <section id="about" className="relative min-h-screen flex items-center py-20 bg-orange-50/50 overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         <div className="relative group max-w-md mx-auto lg:max-w-none">
@@ -195,7 +195,7 @@ const About = () => (
               أنا <span className="font-bold text-gray-900 underline decoration-primary/30 decoration-4">زكرياء أيت عبد الرحيم</span>، أستاذ لغة إنجليزية و <span className="text-primary font-bold">مختص تربوي</span> أعمل في قلب الميدان التعليمي منذ عام 2019.
             </p>
             <p>
-              ساعدت أكثر من <span className="text-primary font-black">+100 طالب</span> في المغرب على امتلاك اللغة الإنجليزية، كسر حاجز الخوف، التفوق الدراسي، والحصول على فرص مهنية عالمية.
+              ساعدت أكثر من <span className="text-primary font-black">100 طالب</span> في المغرب على امتلاك اللغة الإنجليزية، كسر حاجز الخوف، التفوق الدراسي، والحصول على فرص مهنية عالمية.
             </p>
             <div className="bg-white p-6 md:p-10 rounded-3xl border-r-8 border-primary shadow-xl italic text-gray-800 leading-loose text-base md:text-xl">
               "تعلم اللغة الإنجليزية لم يعد مجرد رفاهية بل ضرورة يفرضها الواقع من أجل مواكبة التطور واستثمار الفرص."
@@ -227,7 +227,7 @@ const Programs = () => {
       content: "مراجعة حية للمنهج الوطني، تبسيط القواعد، وتدريبات مكثفة على نماذج الامتحانات.",
       feature: "نضمن لك الجاهزية التامة لتحقيق أعلى النقاط وبناء مسار جامعي ناجح.",
       duration: "90 دقيقة/حصة • حصتين أسبوعياً • 3 أشهر",
-      price: "ابتداءاً من 300",
+      price: "ابتداءً من 300",
       priceLabel: "درهم (برنامج 3 أشهر)",
       popular: true,
       icon: "📝"
@@ -325,7 +325,7 @@ const Programs = () => {
                 href={`https://wa.me/212675548699?text=أريد الاستفسار عن برنامج ${plan.title}`}
                 className={`mt-10 block text-center py-4 rounded-2xl font-black text-lg transition-all ${plan.popular ? 'bg-primary text-white hover:bg-orange-600 shadow-xl shadow-primary/20' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
               >
-                تواصل للاشتراك
+                ناقش خطتك الدراسية معي
               </a>
             </div>
           ))}
@@ -337,14 +337,14 @@ const Programs = () => {
 
 const Features = () => {
   const usps = [
-    { title: "حصص حية عن بعد", desc: "تفاعل حقيقي وتصحيح فوري، بعيداً عن الفيديوهات المسجلة المملة.", icon: "🎥" },
+    { title: "حصص حية عن بعد", desc: "لا مزيد من الفيديوهات المسجلة! تعلم عبر محادثات حية وتصحيح فوري يحاكي الواقع.", icon: "🎥" },
     { title: "متابعة WhatsApp", desc: "الأستاذ معك يومياً للإجابة على تساؤلاتك ودعمك المستمر (24/7).", icon: "💬" },
     { title: "مرونة في الأوقات", desc: "ننسق الجدول بما يتوافق مع التزاماتك المهنية أو الدراسية.", icon: "⏰" },
     { title: "منهج تفاعلي", desc: "استخدام أحدث الوسائل التقنية لجعل التعلم ممتعاً وفعالاً.", icon: "⚡" }
   ];
 
   return (
-    <section id="features" className="relative min-h-screen flex items-center py-20 bg-gray-50 overflow-hidden">
+    <section id="features" className="relative min-h-screen flex items-center py-20 bg-orange-50/50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -391,7 +391,7 @@ const Payment = () => (
       </div>
       <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-8 leading-tight">ابدأ رحلتك بكل ثقة وشفافية</h2>
       <p className="text-lg md:text-2xl text-gray-600 mb-16 leading-relaxed font-medium">
-        نؤمن بالشفافية التامة. بعد حصتك التجريبية المجانية، يمكنك تفعيل اشتراكك عبر تحويل بنكي بسيط (نقبل جميع البنوك المغربية)، مما يضمن لك أماناً وحقاً كاملاً.
+        نضمن لك تجربة تعليمية سلسة وآمنة. ابدأ بحصة تجريبية مجانية، ولا تدفع درهماً واحداً إلا بعد أن تتأكد بنفسك من جودة التعليم.
       </p>
 
       <div className="grid md:grid-cols-2 gap-8 text-right">
