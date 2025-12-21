@@ -216,8 +216,8 @@ const Programs = () => {
       content: "حصص عن بعد تركز على لغة الاجتماعات، المراسلات الرسمية، وتقنيات الإقناع.",
       feature: "ثقة مطلقة في التواصل الدولي وزيادة فرص الترقية أو نجاح مشروعك.",
       duration: "90 دقيقة/حصة • حصتين أسبوعياً • 3 أشهر",
-      price: "600",
-      priceLabel: "درهم (برنامج 3 أشهر)",
+
+
       icon: "💼",
       orderClass: "order-3 lg:order-none"
     },
@@ -228,8 +228,8 @@ const Programs = () => {
       content: "مراجعة حية للمنهج الوطني، تبسيط القواعد، وتدريبات مكثفة على نماذج الامتحانات.",
       feature: "نضمن لك الجاهزية التامة لتحقيق أعلى النقاط وبناء مسار جامعي ناجح.",
       duration: "90 دقيقة/حصة • حصتين أسبوعياً • 3 أشهر",
-      price: "ابتداءً من 300",
-      priceLabel: "درهم (برنامج 3 أشهر)",
+
+
       popular: true,
       icon: "📝",
       orderClass: "order-1 lg:order-none"
@@ -241,11 +241,8 @@ const Programs = () => {
       content: "حصص تفاعلية تركز على المحادثة، تحسين النطق، واكتساب مفردات جديدة.",
       feature: "تعلم بمرونة واستمتاع، وافتح لنفسك آفاقاً ثقافية وعالمية جديدة تماماً.",
       duration: "90 دقيقة/حصة • حصتين أسبوعياً • 3 أشهر",
-      pricingOptions: [
-        { label: "Standard", price: "400", description: "حصص تفاعلية فقط" },
-        { label: "VIP", price: "600", description: "+ متابعة يومية + تمارين مخصصة" }
-      ],
-      priceLabel: "درهم (برنامج 3 أشهر)",
+
+
       icon: "🌍",
       orderClass: "order-2 lg:order-none"
     }
@@ -288,31 +285,9 @@ const Programs = () => {
                 {/* Pricing & Duration Section */}
                 {plan.duration && (
                   <div className="bg-gradient-to-br from-primary/10 to-orange-50 p-6 rounded-2xl border-2 border-primary/20">
-                    <p className="text-xs font-black text-gray-600 mb-3 text-center">التفاصيل والأسعار</p>
+                    <p className="text-xs font-black text-gray-600 mb-3 text-center">التفاصيل والمدة</p>
 
-                    {/* Multiple Pricing Options (for General English) */}
-                    {plan.pricingOptions ? (
-                      <div className="space-y-3 mb-4">
-                        {plan.pricingOptions.map((option: any, idx: number) => (
-                          <div key={idx} className="bg-white p-4 rounded-xl border border-primary/20">
-                            <div className="flex items-center justify-between mb-2">
-                              <span className="font-black text-primary text-lg">{option.label}</span>
-                              <span className="font-black text-gray-900 text-2xl">{option.price} <span className="text-sm text-gray-600">DH</span></span>
-                            </div>
-                            <p className="text-xs text-gray-600 font-medium">{option.description}</p>
-                          </div>
-                        ))}
-                        <p className="text-xs font-bold text-gray-600 text-center mt-2">{plan.priceLabel}</p>
-                      </div>
-                    ) : (
-                      /* Single Pricing Option (for other programs) */
-                      <div className="text-center mb-4">
-                        <p className="text-4xl font-black text-primary mb-1">{plan.price}</p>
-                        <p className="text-sm font-bold text-gray-600">{plan.priceLabel}</p>
-                      </div>
-                    )}
-
-                    <div className="pt-4 border-t border-primary/20">
+                    <div className="pt-2">
                       <p className="text-gray-700 font-bold text-sm text-center leading-relaxed">{plan.duration}</p>
                     </div>
                   </div>
